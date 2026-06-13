@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QualiNova Technologies</title>
+
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <img src="logo.png" alt="QualiNova Technologies Logo" class="logo">
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Engineering Quality. Enabling Innovation.</h1>
+
+    <p>
+        Delivering professional software testing, automation testing,
+        and QA consulting services to help businesses build reliable,
+        high-quality software.
+    </p>
+</section>
+
+<section class="services">
+    <h2>Our Services</h2>
+
+    <div class="card">
+        <h3>Manual Testing</h3>
+        <p>Functional Testing, Regression Testing, Exploratory Testing and UAT.</p>
+    </div>
+
+    <div class="card">
+        <h3>Automation Testing</h3>
+        <p>Selenium, Playwright, Python Automation Frameworks and Continuous Testing.</p>
+    </div>
+
+    <div class="card">
+        <h3>QA Consulting & Test Automation Solutions</h3>
+        <p>QA Strategy, Test Planning, Framework Design and Process Improvement.</p>
+    </div>
+</section>
+
+<section class="why">
+    <h2>Why Choose Us</h2>
+
+    <ul>
+        <li>5+ Years QA Experience</li>
+        <li>Selenium & Playwright Expertise</li>
+        <li>Quality-Driven Approach</li>
+        <li>Cost Effective Testing Solutions</li>
+        <li>Reliable Delivery</li>
+    </ul>
+</section>
+
+<section class="tech">
+    <h2>Technologies</h2>
+
+    <div class="tech-list">
+        Selenium • Playwright • Python • Pytest • Postman • Jira • GitHub
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contact</h2>
+
+    <p>Email: qualinovatech@gmail.com</p>
+    <p>Website: qualinova.tech</p>
+</section>
+
+<footer>
+    <p>© 2026 QualiNova Technologies. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

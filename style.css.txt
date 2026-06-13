@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 650px;
+    width: 90%;
+}
+
+.hero {
+    background: #0a3d91;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.services,
+.why,
+.tech,
+.contact {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: #f5f7fb;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #0a3d91;
+}
+
+.tech-list {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    background: #0a3d91;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
