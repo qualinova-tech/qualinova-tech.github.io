@@ -617,21 +617,32 @@
             </p>
 
             
-            <form action="mailto:qualinovatech@gmail.com" method="post" enctype="text/plain">
+            <form action="https://formsubmit.co/qualinovatech@gmail.com" method="POST">
 
-                <input type="text" placeholder="Your Name">
+                <input type="text"
+                       name="name"
+                       placeholder="Your Name"
+                       required>
 
-                <input type="email" placeholder="Your Email">
+                <input type="email"
+                       name="email"
+                       placeholder="Your Email"
+                       required>
 
-                <input type="text" placeholder="Company Name">
+                <input type="text"
+                       name="company"
+                       placeholder="Company Name">
 
-                <textarea rows="5" placeholder="Tell us about your project"></textarea>
+                <textarea name="message"
+                          rows="5"
+                          placeholder="Tell us about your project"
+                          required></textarea>
 
                 <button type="submit">
-                    Send Message
+                        Request Consultation
                 </button>
 
-            </form>
+           </form>
 
         </div>
 
