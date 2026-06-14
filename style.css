@@ -492,3 +492,20 @@ footer{
     margin:auto;
 }
 
+.trust{
+    padding:60px 0;
+    background:white;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    text-align:center;
+}
+
+.trust-grid i{
+    font-size:40px;
+    color:#2563eb;
+    margin-bottom:15px;
+}
