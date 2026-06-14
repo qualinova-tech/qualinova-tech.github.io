@@ -3,79 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QualiNova Technologies</title>
 
-    <link rel="icon" href="favicon.png">
+    <title>QualiNova Technologies | Software Testing & QA Automation Solutions</title>
+
+    <meta name="description"
+          content="QualiNova Technologies provides Manual Testing, Automation Testing, QA Consulting, API Testing and Quality Assurance Solutions for startups and enterprises.">
+
+    <meta name="keywords"
+          content="QA Testing, Automation Testing, Selenium, Playwright, Software Testing, QA Consulting, API Testing">
+
+    <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="container">
-        <img src="logo.png" alt="QualiNova Technologies Logo" class="logo">
+<!-- NAVIGATION -->
+
+<header class="header">
+    <div class="container nav-container">
+
+        <div class="logo-section">
+            <img src="images/logo.png" alt="QualiNova Technologies">
+        </div>
+
+        <nav class="navbar">
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button id="theme-toggle">
+                🌙
+            </button>
+
+            <a href="#contact" class="consult-btn">
+                Free Consultation
+            </a>
+
+        </div>
+
     </div>
 </header>
 
-<section class="hero">
-    <h1>Engineering Quality. Enabling Innovation.</h1>
+<!-- HERO -->
 
-    <p>
-        Delivering professional software testing, automation testing,
-        and QA consulting services to help businesses build reliable,
-        high-quality software.
-    </p>
-</section>
+<section id="home" class="hero">
 
-<section class="services">
-    <h2>Our Services</h2>
+    <div class="hero-content">
 
-    <div class="card">
-        <h3>Manual Testing</h3>
-        <p>Functional Testing, Regression Testing, Exploratory Testing and UAT.</p>
+        <span class="hero-badge">
+            Software Quality Assurance & Test Automation
+        </span>
+
+        <h1>
+            Delivering Reliable Software Through
+            Expert Quality Engineering
+        </h1>
+
+        <p>
+            QualiNova Technologies helps startups and enterprises
+            improve software quality through Manual Testing,
+            Automation Testing, API Validation, QA Consulting and
+            scalable test automation solutions.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#contact" class="primary-btn">
+                Get Free Consultation
+            </a>
+
+            <a href="#services" class="secondary-btn">
+                Explore Services
+            </a>
+
+        </div>
+
     </div>
 
-    <div class="card">
-        <h3>Automation Testing</h3>
-        <p>Selenium, Playwright, Python Automation Frameworks and Continuous Testing.</p>
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat-card">
+            <h2>5+</h2>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>1000+</h2>
+            <p>Test Cases Executed</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>500+</h2>
+            <p>Defects Identified</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>24/7</h2>
+            <p>Remote Support</p>
+        </div>
+
     </div>
 
-    <div class="card">
-        <h3>QA Consulting & Test Automation Solutions</h3>
-        <p>QA Strategy, Test Planning, Framework Design and Process Improvement.</p>
+</section>
+
+<!-- SERVICES -->
+
+<section id="services" class="services">
+
+    <div class="section-title">
+        <h2>Our Services</h2>
+        <p>
+            End-to-end software testing and quality assurance services.
+        </p>
     </div>
-</section>
 
-<section class="why">
-    <h2>Why Choose Us</h2>
+    <div class="container service-grid">
 
-    <ul>
-        <li>5+ Years QA Experience</li>
-        <li>Selenium & Playwright Expertise</li>
-        <li>Quality-Driven Approach</li>
-        <li>Cost Effective Testing Solutions</li>
-        <li>Reliable Delivery</li>
-    </ul>
-</section>
+        <div class="service-card">
 
-<section class="tech">
-    <h2>Technologies</h2>
+            <h3>Manual Testing</h3>
 
-    <div class="tech-list">
-        Selenium • Playwright • Python • Pytest • Postman • Jira • GitHub
+            <p>
+                Functional Testing, Regression Testing,
+                Exploratory Testing and User Acceptance Testing.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <h3>Automation Testing</h3>
+
+            <p>
+                Selenium, Playwright, CI/CD Integration and
+                scalable automation framework development.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <h3>API Testing</h3>
+
+            <p>
+                REST API Validation, Postman Testing,
+                Integration Testing and API Automation.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <h3>Mobile Testing</h3>
+
+            <p>
+                Android and iOS application testing
+                for performance and reliability.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <h3>Regression Testing</h3>
+
+            <p>
+                Comprehensive validation ensuring
+                existing functionality remains stable.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <h3>QA Consulting & Test Automation Solutions</h3>
+
+            <p>
+                QA strategy, process improvement,
+                release validation and quality engineering.
+            </p>
+
+        </div>
+
     </div>
+
 </section>
 
-<section class="contact">
-    <h2>Contact</h2>
-
-    <p>Email: qualinovatech@gmail.com</p>
-    <p>Website: qualinova.tech</p>
-</section>
-
-<footer>
-    <p>© 2026 QualiNova Technologies. All Rights Reserved.</p>
-</footer>
+<script src="script.js"></script>
 
 </body>
 </html>
