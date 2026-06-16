@@ -541,3 +541,17 @@ footer{
     color:#2563eb;
     margin-bottom:15px;
 }
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 28px;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
