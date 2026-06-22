@@ -68,6 +68,11 @@ section{
     padding:14px 0;
 }
 
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:100px;
+}
+
 .logo-wrap{
     display:flex;
     align-items:center;
