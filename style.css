@@ -72,13 +72,11 @@ section{
     display:flex;
     align-items:center;
     text-decoration:none;
-    flex-shrink:0;
 }
 
 .logo{
-    height:90px;
+    height:60px;
     width:auto;
-    display:block;
 }
 
 .navbar{
