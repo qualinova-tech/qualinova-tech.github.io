@@ -1,72 +1,29 @@
-// =========================
-// MOBILE MENU TOGGLE
-// =========================
-const menuToggle = document.getElementById("menu-toggle");
-const navbar = document.getElementById("navbar");
-
-if (menuToggle && navbar) {
-    menuToggle.addEventListener("click", () => {
-        navbar.classList.toggle("active");
-    });
-}
-
-// =========================
-// CLOSE MOBILE MENU ON LINK CLICK
-// =========================
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        if (navbar.classList.contains("active")) {
-            navbar.classList.remove("active");
-        }
-    });
-});
-
-// =========================
-// FAQ TOGGLE
-// =========================
-const faqItems = document.querySelectorAll(".faq-item");
-
-faqItems.forEach(item => {
-    const question = item.querySelector(".faq-question");
-
-    question.addEventListener("click", () => {
-        item.classList.toggle("active");
-    });
-});
-
-// =========================
-// BACK TO TOP BUTTON
-// =========================
-const backToTop = document.getElementById("backToTop");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        backToTop.style.display = "flex";
-    } else {
-        backToTop.style.display = "none";
-    }
-});
-
-backToTop.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
-
-// ==============================
-// QUALINOVA NAV ACTIVE ON CLICK + SCROLL
-// ==============================
-
 document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
     const navLinks = document.querySelectorAll(".nav-link");
     const sections = document.querySelectorAll("section[id]");
+    const backToTop = document.getElementById("backToTop");
 
     // =========================
-    // ACTIVE MENU ON CLICK
+    // MOBILE MENU TOGGLE
+    // =========================
+    if (menuToggle && navbar) {
+        menuToggle.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+    }
+
+    // =========================
+    // CLOSE MOBILE MENU ON LINK CLICK
     // =========================
     navLinks.forEach(link => {
         link.addEventListener("click", function () {
+            if (navbar.classList.contains("active")) {
+                navbar.classList.remove("active");
+            }
+
+            // Active on click
             navLinks.forEach(item => item.classList.remove("active"));
             this.classList.add("active");
         });
@@ -79,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let scrollY = window.pageYOffset;
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 130;
+            const sectionTop = section.offsetTop - 140;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute("id");
 
@@ -95,7 +52,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", updateActiveNavOnScroll);
-
-    // Run once when page loads
     updateActiveNavOnScroll();
+
+    // =========================
+    // FAQ TOGGLE
+    // =========================
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+        const question = item.querySelector(".faq-question");
+        if (question) {
+            question.addEventListener("click", () => {
+                item.classList.toggle("active");
+            });
+        }
+    });
+
+    // =========================
+    // BACK TO TOP BUTTON
+    // =========================
+    if (backToTop) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = "flex";
+            } else {
+                backToTop.style.display = "none";
+            }
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
 });
