@@ -53,3 +53,49 @@ backToTop.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+// ==============================
+// QUALINOVA NAV ACTIVE ON CLICK + SCROLL
+// ==============================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section[id]");
+
+    // ------------------------------
+    // ACTIVE LINK ON CLICK
+    // ------------------------------
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.forEach(item => item.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+
+    // ------------------------------
+    // ACTIVE LINK ON SCROLL
+    // ------------------------------
+    function setActiveLinkOnScroll() {
+        let scrollY = window.pageYOffset;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 140;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute("id");
+
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                navLinks.forEach(link => link.classList.remove("active"));
+
+                const activeLink = document.querySelector('.nav-link[href="#' + sectionId + '"]');
+                if (activeLink) {
+                    activeLink.classList.add("active");
+                }
+            }
+        });
+    }
+
+    window.addEventListener("scroll", setActiveLinkOnScroll);
+
+    // Run once on page load
+    setActiveLinkOnScroll();
+});
