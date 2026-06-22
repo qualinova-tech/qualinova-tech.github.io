@@ -15,15 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // =========================
-    // CLOSE MOBILE MENU ON LINK CLICK
+    // CLOSE MOBILE MENU + ACTIVE LINK ON CLICK
     // =========================
     navLinks.forEach(link => {
         link.addEventListener("click", function () {
-            if (navbar.classList.contains("active")) {
+            if (navbar && navbar.classList.contains("active")) {
                 navbar.classList.remove("active");
             }
 
-            // Active on click
             navLinks.forEach(item => item.classList.remove("active"));
             this.classList.add("active");
         });
@@ -33,22 +32,26 @@ document.addEventListener("DOMContentLoaded", function () {
     // ACTIVE MENU ON SCROLL
     // =========================
     function updateActiveNavOnScroll() {
-        let scrollY = window.pageYOffset;
+        let currentSection = "";
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 140;
             const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute("id");
 
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                navLinks.forEach(link => link.classList.remove("active"));
-
-                const activeLink = document.querySelector('.nav-link[href="#' + sectionId + '"]');
-                if (activeLink) {
-                    activeLink.classList.add("active");
-                }
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute("id");
             }
         });
+
+        if (currentSection) {
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+
+                if (link.getAttribute("href") === "#" + currentSection) {
+                    link.classList.add("active");
+                }
+            });
+        }
     }
 
     window.addEventListener("scroll", updateActiveNavOnScroll);
