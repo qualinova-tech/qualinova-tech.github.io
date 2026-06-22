@@ -62,9 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".nav-link");
     const sections = document.querySelectorAll("section[id]");
 
-    // ------------------------------
-    // ACTIVE LINK ON CLICK
-    // ------------------------------
+    // =========================
+    // ACTIVE MENU ON CLICK
+    // =========================
     navLinks.forEach(link => {
         link.addEventListener("click", function () {
             navLinks.forEach(item => item.classList.remove("active"));
@@ -72,14 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ------------------------------
-    // ACTIVE LINK ON SCROLL
-    // ------------------------------
-    function setActiveLinkOnScroll() {
+    // =========================
+    // ACTIVE MENU ON SCROLL
+    // =========================
+    function updateActiveNavOnScroll() {
         let scrollY = window.pageYOffset;
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 140;
+            const sectionTop = section.offsetTop - 130;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute("id");
 
@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    window.addEventListener("scroll", setActiveLinkOnScroll);
+    window.addEventListener("scroll", updateActiveNavOnScroll);
 
-    // Run once on page load
-    setActiveLinkOnScroll();
+    // Run once when page loads
+    updateActiveNavOnScroll();
 });
